@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learn Tagalog with Christian S Besario</title>
+  <style>
+    body { font-family: 'Segoe UI', sans-serif; margin:0; padding:0; background:#f0f8ff; color:#023e8a; }
+    header { background: linear-gradient(to right,#0077b6,#0096c7); color:white; text-align:center; padding:80px 20px; }
+    header h1 { font-size:3em; margin-bottom:10px; }
+    header p { font-size:1.2em; margin-bottom:20px; }
+    nav { background:#023e8a; display:flex; justify-content:center; flex-wrap:wrap; position:sticky; top:0; z-index:100; }
+    nav a { color:white; text-decoration:none; margin:10px 20px; font-weight:bold; transition:.3s; }
+    nav a:hover { color:#ffba08; }
+    section { padding:60px 20px; max-width:1000px; margin:auto; }
+    h2 { text-align:center; font-size:2em; color:#0077b6; margin-bottom:20px; }
+    ul { list-style-type:square; padding-left:20px; }
+    .cta { background:#ffba08; color:#023e8a; text-align:center; padding:20px; margin:20px auto; border-radius:10px; font-size:1.2em; cursor:pointer; display:inline-block; transition:.3s; }
+    .cta:hover { background:#ffc857; }
+    .testimonial { background:#e0f7fa; padding:20px; margin:15px 0; border-left:5px solid #0077b6; border-radius:5px; }
+    form { display:flex; flex-direction:column; max-width:500px; margin:auto; }
+    input,textarea { padding:10px; margin-bottom:15px; border-radius:5px; border:1px solid #ccc; font-size:1em; }
+    button { background:#0077b6; color:white; padding:12px; border:none; border-radius:5px; font-size:1.1em; cursor:pointer; transition:.3s; }
+    button:hover { background:#0096c7; }
+    footer { background:#023e8a; color:white; text-align:center; padding:20px; }
+    @media(max-width:600px){header h1{font-size:2em;} nav a{margin:10px;}}
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Learn Tagalog with Christian S Besario</h1>
+  <p>Fun, interactive, and effective Tagalog lessons for foreigners worldwide!</p>
+  <div class="cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Book a Lesson Now</div>
+</header>
+
+<nav>
+  <a href="#about">About Me</a>
+  <a href="#courses">Courses</a>
+  <a href="#testimonials">Testimonials</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section id="about">
+  <h2>About Me</h2>
+  <p>Hello! I'm Christian S Besario, a passionate Tagalog teacher. I help foreigners learn Filipino in a fun, easy, and practical way. Whether you want to chat with locals, travel, or connect with Filipino friends, I’m here to guide you step by step!</p>
+  <p>With years of teaching experience and love for Filipino culture, I make learning Tagalog engaging, interactive, and personalized.</p>
+  <p><em>Add your photo here: &lt;img src="yourphoto.jpg" alt="Christian S Besario" style="width:200px; border-radius:50%;"&gt;</em></p>
+</section>
+
+<section id="courses">
+  <h2>Courses & Prices</h2>
+  <ul>
+    <li><strong>Beginner:</strong> Greetings, basic phrases, numbers, and everyday conversation. <br>Price: $10 / 1-hour lesson</li>
+    <li><strong>Intermediate:</strong> More complex sentences, dialogues, and cultural tips. <br>Price: $15 / 1-hour lesson</li>
+    <li><strong>Advanced:</strong> Fluent communication, idioms, and local expressions. <br>Price: $20 / 1-hour lesson</li>
+  </ul>
+  <div class="cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Book a Lesson Now</div>
+</section>
+
+<section id="testimonials">
+  <h2>Student Testimonials</h2>
+  <div class="testimonial">“Learning Tagalog with Christian S Besario was fun and effective! I can now chat with my Filipino friends confidently.” – Maria, Spain</div>
+  <div class="testimonial">“The lessons are interactive and personalized. Highly recommended!” – John, USA</div>
+  <div class="testimonial">“I love how Christian S Besario teaches culture along with the language. Makes learning so much easier.” – Emma, Australia</div>
+</section>
+
+<section id="contact">
+  <h2>Contact Me</h2>
+  <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+  <p style="text-align:center; margin-top:20px;">
+    <a href="https://www.paypal.com/paypalme/khaibesario" target="_blank" style="background:#ffba08; color:#023e8a; padding:10px 20px; border-radius:5px; text-decoration:none;">Pay & Book a Lesson</a>
+  </p>
+</section>
+
+<footer>
+  <p>&copy; 2026 Learn Tagalog with Christian S Besario. All rights reserved.</p>
+</footer>
+
+<script>
+  const links = document.querySelectorAll('nav a, .cta');
+  links.forEach(link => {
+    link.addEventListener('click', e => {
+      if(link.hash) {
+        e.preventDefault();
+        document.querySelector(link.hash).scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
